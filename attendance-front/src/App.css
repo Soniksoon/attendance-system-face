@@ -1,0 +1,491 @@
+/* src/App.css */
+
+/* ========== БАЗА ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #ffffff;
+  color: #1e293b;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* ========== ЦЕНТРИРОВАННАЯ АВТОРИЗАЦИЯ ========== */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.login-box {
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 440px;
+  padding: 48px 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.12);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.login-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+  border: none;
+  padding: 0;
+}
+
+.login-header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  letter-spacing: 0.3px;
+}
+
+.input-group input {
+  padding: 14px 18px;
+  font-size: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  background: #ffffff;
+}
+
+.input-group input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.input-group input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.login-btn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.login-btn:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -6px rgba(79, 70, 229, 0.3);
+}
+
+.login-btn:active {
+  transform: translateY(1px);
+}
+
+/* ========== ОСНОВНОЙ КОНТЕЙНЕР ПОСЛЕ ВХОДА ========== */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 28px 32px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .login-box {
+    padding: 32px 24px;
+  }
+  
+  .login-header h2 {
+    font-size: 28px;
+  }
+}
+
+/* ========== ЗАГОЛОВКИ ========== */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  border-left: 4px solid #4f46e5;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #334155;
+  margin: 24px 0 16px 0;
+}
+
+/* ========== КНОПКИ ========== */
+button {
+  background: #f1f5f9;
+  color: #1e293b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: #4f46e5;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+}
+
+.btn-success {
+  background: #10b981;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #059669;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+.btn-warning {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn-warning:hover {
+  background: #d97706;
+}
+
+.btn-back {
+  background-color: #64748b;
+  color: white;
+}
+
+.btn-back:hover {
+  background-color: #475569;
+}
+
+.btn-analytics {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-analytics:hover {
+  background-color: #2563eb;
+}
+
+.btn-rating {
+  background-color: #f97316;
+  color: white;
+}
+
+.btn-rating:hover {
+  background-color: #ea580c;
+}
+
+.btn-journal {
+  background-color: #8b5cf6;
+  color: white;
+}
+
+.btn-journal:hover {
+  background-color: #7c3aed;
+}
+
+/* ========== ФОРМЫ ========== */
+input, select {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  background: white;
+}
+
+input:focus, select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* ========== ТАБЛИЦЫ ========== */
+.attendance-table,
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.attendance-table th,
+.schedule-table th {
+  background: #f8fafc;
+  color: #1e293b;
+  padding: 14px 12px;
+  font-weight: 600;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.attendance-table td,
+.schedule-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.attendance-table tr:hover td {
+  background: #f8fafc;
+}
+
+/* ========== СПИСКИ ========== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f8fafc;
+  margin: 8px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  border: 1px solid #f1f5f9;
+}
+
+li:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* ========== КАРТОЧКИ ========== */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+/* ========== СТАТУСЫ ========== */
+.present {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.absent {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.skud {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+/* ========== ПРОГРЕСС-БАР ========== */
+.progress-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #10b981;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* ========== ФОРМЫ ДОБАВЛЕНИЯ ========== */
+.add-form {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 20px 0;
+  border: 1px solid #e2e8f0;
+}
+
+.add-form input,
+.add-form select {
+  margin-right: 12px;
+  margin-bottom: 12px;
+  min-width: 200px;
+}
+
+@media (max-width: 640px) {
+  .add-form input,
+  .add-form select {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* ========== КНОПКА ВЫХОДА ========== */
+.logout-btn {
+  background: #f1f5f9;
+  margin-top: 30px;
+  width: auto;
+}
+
+.logout-btn:hover {
+  background: #e2e8f0;
+}
+
+/* ========== АНИМАЦИИ ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container,
+.login-box {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* ========== АДАПТАЦИЯ ========== */
+@media (max-width: 900px) {
+  .attendance-table,
+  .schedule-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.btn-journal {
+  background-color: #8b5cf6;
+  color: white;
+}
+
+.btn-journal:hover {
+  background-color: #7c3aed;
+}
+
+.btn-back {
+  background-color: #64748b;
+  color: white;
+}
+
+.btn-back:hover {
+  background-color: #475569;
+}
+
+.btn-analytics {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-analytics:hover {
+  background-color: #2563eb;
+}
+
+.btn-rating {
+  background-color: #f97316;
+  color: white;
+}
+
+.btn-rating:hover {
+  background-color: #ea580c;
+}
